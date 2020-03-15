@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>Learn to Sort Waste!</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Francois+One&display=swap" rel="stylesheet">
+    <script>
+        var correct = 0;
+        var wrong = 0;
+        //7 Trash
+        //8 Recycle
+        //7 Compost
+        var items = [
+                ['Plate', 0],
+                ['Floss', 0],
+                ['Diaper', 0],
+                ['Lightbulb', 0],
+                ['Pencil', 0],
+                ['Sponge', 0],
+                ['Wood', 0],
+                ['Can', 1],
+                ['Water Bottle', 1],
+                ['CD', 1],
+                ['Detergent', 1],
+                ['Toy Car', 1],
+                ['Paper', 1],
+                ['Juice Box', 1],
+                ['Cardboard', 1],
+                ['Bread', 2],
+                ['Egg', 2],
+                ['Apple', 2],
+                ['Meat', 2],
+                ['Flower', 2],
+                ['Leaves', 2],
+                ['Chopsticks', 2]
+        ];
+        var imgArray = new Array();
+        imgArray[0] = new Image();
+        imgArray[0].src = 'images/plate.png';
+        imgArray[1] = new Image;
+        imgArray[1].src = 'images/floss.png';
+        imgArray[2] = new Image;
+        imgArray[2].src = 'images/diaper.png';
+        imgArray[3] = new Image;
+        imgArray[3].src = 'images/lightbulb.png';
+        imgArray[4] = new Image;
+        imgArray[4].src = 'images/pencil.png';
+        imgArray[5] = new Image;
+        imgArray[5].src = 'images/sponge.png';
+        imgArray[6] = new Image;
+        imgArray[6].src = 'images/wood.png';
+        imgArray[7] = new Image;
+        imgArray[7].src = 'images/can.png';
+        imgArray[8] = new Image;
+        imgArray[8].src = 'images/water bottle.png';
+        imgArray[9] = new Image;
+        imgArray[9].src = 'images/cd.png';
+        imgArray[10] = new Image;
+        imgArray[10].src = 'images/detergent.png';
+        imgArray[11] = new Image;
+        imgArray[11].src = 'images/toy car.png';
+        imgArray[12] = new Image;
+        imgArray[12].src = 'images/paper.png';
+        imgArray[13] = new Image;
+        imgArray[13].src = 'images/juice box.png';
+        imgArray[14] = new Image;
+        imgArray[14].src = 'images/cardboard.png';
+        imgArray[15] = new Image;
+        imgArray[15].src = 'images/bread.png';
+        imgArray[16] = new Image;
+        imgArray[16].src = 'images/egg.png';
+        imgArray[17] = new Image;
+        imgArray[17].src = 'images/apple.png';
+        imgArray[18] = new Image;
+        imgArray[18].src = 'images/meat.png';
+        imgArray[19] = new Image;
+        imgArray[19].src = 'images/flower.png';
+        imgArray[20] = new Image;
+        imgArray[20].src = 'images/leaves.png';
+        imgArray[21] = new Image;
+        imgArray[21].src = 'images/chopsticks.png';
+
+        var random_item = Math.floor(Math.random() * items.length);
+        function pickItem() {
+            random_item = Math.floor(Math.random() * items.length);
+            document.getElementById("item").innerHTML = items[random_item][0];
+            document.getElementById("item_img").src = imgArray[random_item].src;
+        }
+        function checkTrash() {
+            if(items[random_item][1] == 0) {
+                correct++;
+                document.getElementById("correct_score").innerHTML = correct;
+            }
+            else{
+                wrong++;
+                document.getElementById("wrong_score").innerHTML = wrong;
+            }
+            items.splice(random_item, 1);
+            imgArray.splice(random_item, 1);
+            random_item = Math.floor(Math.random() * items.length);
+            document.getElementById("item").innerHTML = items[random_item][0];
+            document.getElementById("item_img").src = imgArray[random_item].src;
+        }
+        function checkRecycle() {
+            if (items[random_item][1] == 1) {
+                correct++;
+                document.getElementById("correct_score").innerHTML = correct;
+            }
+            else {
+                wrong++;
+                document.getElementById("wrong_score").innerHTML = wrong;
+            }
+            items.splice(random_item, 1);
+            imgArray.splice(random_item, 1);
+            random_item = Math.floor(Math.random() * items.length);
+            document.getElementById("item").innerHTML = items[random_item][0];
+            document.getElementById("item_img").src = imgArray[random_item].src;
+        }
+        function checkCompost() {
+            if (items[random_item][1] == 2) {
+                correct++;
+                document.getElementById("correct_score").innerHTML = correct;
+            }
+            else {
+                wrong++;
+                document.getElementById("wrong_score").innerHTML = wrong;
+            }
+            items.splice(random_item, 1);
+            imgArray.splice(random_item, 1);
+            random_item = Math.floor(Math.random() * items.length);
+            document.getElementById("item").innerHTML = items[random_item][0];
+            document.getElementById("item_img").src = imgArray[random_item].src;
+        }
+    </script>
+</head>
+
+<body onload='pickItem();' style="background-color: #84cb53;">
+    <div id="top-bar">
+        <a id="logo" href="index.html">
+            <img id="logo_image" src="images/recycle-icon.png">
+            <h1 class="header">Sort Smarter!</h1>
+        </a>
+        <div id="tabs">
+            <a class="header" href="game.html">Game</a>
+            <a class="header" href="learn.html">Learn</a>
+            <a class="header" href="about.html">About</a>
+        </div>
+    </div>
+    <div id="game">
+        <div id="item_container">
+            <img id="item_img" src="">
+            <p id="item"></p>
+        </div>
+        <div id="score_container">
+            <div id="correct_container">
+                <p id="correct_score">0</p>
+            </div><div id="wrong_container">
+                <p id="wrong_score">0</p>
+            </div>
+        </div>
+        <div id="bin_container">
+            <img class="bin" src="images/trash bin.png" onclick='checkTrash();'>
+            <img class="bin" src="images/recycle bin.png" onclick='checkRecycle();'>
+            <img class="bin" src="images/compost bin.png" onclick='checkCompost();'>
+        </div>
+        <!--
+        <div id="results">
+            <p>RESULTS</p>
+        </div>
+        -->
+    </div>
+    <!--<button type="button" onclick='checkTrash();'>Trash</button>
+    <button type="button" onclick='checkRecycle();'>Recycle</button>
+    <button type="button" onclick='checkCompost();'>Compost</button>-->
+    
+</body>
+
+</html>

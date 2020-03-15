@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>Learn to Sort Waste!</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Francois+One|Open+Sans:400,600|Roboto&display=swap" rel="stylesheet">
+    <style>
+        
+        /* Style the tab */
+        .tab {
+            overflow: hidden;
+            background-color: #fff;
+        }
+    
+        /* Style the buttons inside the tab */
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+    
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: #ddd;
+        }
+    
+        /* Create an active/current tablink class */
+        .tab button.active {
+            background-color: #ccc;
+        }
+    
+        /* Style the tab content */
+        .tabcontent {
+            font-family: 'Open Sans', sans-serif;
+            color: #525f7f;
+            background-color:white;
+            display: none;
+            padding: 6px 12px;
+            border-top: 5px solid #24b47e;
+        }
+        
+        .tablinks {
+            font-family: 'Francois One', sans-serif;
+            text-transform: uppercase;
+            color: #24b47e;
+            font-size: 2vw;
+        }
+    </style>
+</head>
+
+<body onload="openCity(event, 'Trash')">
+    <div id="top-bar">
+        <a id="logo" href="index.html">
+            <img id="logo_image" src="images/recycle-icon.png">
+            <h1 class="header">Sort Smarter!</h1>
+        </a>
+        <div id="tabs">
+            <a class="header" href="game.html">Game</a>
+            <a class="header" href="learn.html">Learn</a>
+            <a class="header" href="about.html">About</a>
+        </div>
+    </div>
+    <div id="main_table">
+        <div id="table_header">
+            <h3 id="list_title">Which Bin?</h3>
+            <a id="list_link" href="https://www.recology.com/recology-san-francisco/your-three-carts/">List Referenced from Recology &#8594;</a>
+        </div>
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'Trash')" style="color:#4b4b4b;">TRASH</button>
+            <button class="tablinks" onclick="openCity(event, 'Recycle')" style="color:#317cdd;">RECYCLE</button>
+            <button class="tablinks" onclick="openCity(event, 'Compost')" style="color:#5add55;">COMPOST</button>
+        </div>
+        
+        <div id="Trash" class="tabcontent">
+            <h3>Assorted Items</h3>
+            <p>&#10003; Cat litter and animal feces (bagged)</p>
+            <p>&#10003; Ceramic dishware or glassware</p>
+            <p>&#10003; Cigarette Butts (extinguished – run under water prior to disposal)</p>
+            <p>&#10003; Dental floss</p>
+            <p>&#10003; Diapers</p>
+            <p>&#10003; Feminine Hygiene Products</p>
+            <p>&#10003; Glass mirrors and windows inside a double brown paper bag and smashed in small pieces</p>
+            <p>&#10003; Incandescent light bulbs (no fluorescents or HIDs)</p>
+            <p>&#10003; Mylar (shiny metal) bags (potato chips, candy bars, balloons, etc)</p>
+            <p>&#10003; Pens and pencils</p>
+            <p>&#10003; Plastic items mixed with metal or rubber</p>
+            <p>&#10003; Plastic labeled “Biodegradable” only</p>
+            <p>&#10003; Rubber bands</p>
+            <p>&#10003; Six-pack ring holder – please cut up</p>
+            <p>&#10003; Sponges</p>
+            <p>&#10003; Styrofoam</p>
+            <p>&#10003; Twist ties</p>
+            <p>&#10003; Wood – small pieces of plywood, press board, and painted or stained wood</p>
+        </div>
+        
+        <div id="Recycle" class="tabcontent">
+            <h3>Metal (no liquids or food)</h3>
+            <p>&#10003; Aluminum cans</p>
+            <p>&#10003; Aluminum foil and trays (ball foil up to softball size)</p>
+            <p>&#10003; Caps and lids from bottles, jars and steel (tin) cans</p>
+            <p>&#10003; Paint cans (must be empty or dry)</p>
+            <p>&#10003; Spray cans (must be empty)</p>
+            <p>&#10003; Steel (tin) cans</p>
+            <h3>Plastics</h3>
+            <p>&#10003; Clean, dry, empty plastic bags inside a clear plastic bag (the size roughly of a basketball)</p>
+            <p>&#10003; Bottles (leave caps on)</p>
+            <p>&#10003; Buckets (metal handle ok)</p>
+            <p>&#10003; CD’s, DVD’s, CDROM & Cases (remove paper insert)</p>
+            <p>&#10003; Coffee cup lids</p>
+            <p>&#10003; Containers and clamshells</p>
+            <p>&#10003; Corks – plastic</p>
+            <p>&#10003; Cups and plates (plastic only, no Styrofoam)</p>
+            <p>&#10003; Flower pots and trays – plastic</p>
+            <p>&#10003; Molded plastic packaging</p>
+            <p>&#10003; Toys (no electronics, metal or batteries)</p>
+            <p>&#10003; Tubs and lids (i.e.,: yogurt containers and Tupperware)</p>
+            <p>&#10003; Utensils – plastic</p>
+            <h3>Fabrics (must be bagged)</h3>
+            <p>&#10003; Linens – Clean and placed in clear bag. Towels, curtains okay.</p>
+            <p>&#10003; Fabric – Clean and placed in clear bag. Rips, holes, single socks okay. No sneakers, boots, belts, or purses.</p>
+            <p>&#10003; Rags – Clean and placed in clear bag. Towels, curtains okay.</p>
+            <p>&#10003; Clothes – Rips, holes, single socks okay. Place clean clothes in clear bag. If clothes are in good condition, please donate them to a thrift store.</p>
+            <h3>Paper (clean, dry and unsoiled)</h3>
+            <p>&#10003; Empty, clean coffee cups</p>
+            <p>&#10003; Empty, clean ice cream containers</p>
+            <p>&#10003; Soup cartons and juice boxes</p>
+            <p>&#10003; Paper milk, juice and other beverage cartons</p>
+            <p>&#10003; Bags (paper only)</p>
+            <p>&#10003; Cardboard (non-waxed)</p>
+            <p>&#10003; Cereal boxes and Paperboard (remove plastic liner)</p>
+            <p>&#10003; Computer and office paper</p>
+            <p>&#10003; Egg cartons (paper)</p>
+            <p>&#10003; Envelopes (windows okay)</p>
+            <p>&#10003; Junk mail and magazines</p>
+            <p>&#10003; Newspapers</p>
+            <p>&#10003; Packing or Kraft paper</p>
+            <p>&#10003; Phonebooks</p>
+            <p>&#10003; Sticky notes</p>
+            <p>&#10003; Shredded paper (place in sealed paper bag and label “Shredded Paper”)</p>
+            <p>&#10003; Wrapping paper (non-metallic)</p>
+            <h3>Glass (no liquids or food)</h3>
+            <p>&#10003; Glass bottles and jars only (metal caps and lids too)</p>
+        </div>
+        
+        <div id="Compost" class="tabcontent">
+            <h3>Food Scraps</h3>
+            <p>&#10003; Bread, grains and pasta</p>
+            <p>&#10003; Coffee grounds with paper filter</p>
+            <p>&#10003; Dairy</p>
+            <p>&#10003; Eggshells and eggs</p>
+            <p>&#10003; Fruit (pits & peels)</p>
+            <p>&#10003; Leftovers and spoiled food</p>
+            <p>&#10003; Meat (including bones)</p>
+            <p>&#10003; Seafood (including shellfish)</p>
+            <p>&#10003; Tea and tea bags</p>
+            <p>&#10003; Vegetables</p>
+            <h3>Food Soiled Paper</h3>
+            <p>&#10003; Coffee filters</p>
+            <p>&#10003; Greasy pizza boxes</p>
+            <p>&#10003; Paper plates</p>
+            <p>&#10003; Paper bags, napkins, tissues and towels</p>
+            <p>&#10003; Paper take-out boxes and containers (metal handle OK)</p>
+            <p>&#10003; Tissues</p>
+            <h3>Plants</h3>
+            <p>&#10003; Branches and brush</p>
+            <p>&#10003; Flowers and floral trimmings</p>
+            <p>&#10003; Grasses and weeds</p>
+            <p>&#10003; Leaves</p>
+            <p>&#10003; Tree trimmings (less than 6 inches in diameter and 4 feet long)</p>
+            <h3>Other</h3>
+            <p>&#10003; Cotton balls and cotton swabs</p>
+            <p>&#10003; Hair, fur, and feathers (non-synthetic)</p>
+            <p>&#10003; Plastic and cutlery clearly labeled “Compostable” (green stripe or sticker to allow for easy identification)</p>
+            <p>&#10003; Vegetable wood crates (metal wire is okay)</p>
+            <p>&#10003; Waxed cardboard</p>
+            <p>&#10003; Wood – small pieces of lumber or sawdust from clean wood only (no plywood, press board, painted, stained or treated wood)</p>
+            <p>&#10003; Wooden chop sticks</p>
+            <p>&#10003; Corks – natural (drop in barrels at Whole Foods)</p>
+        </div>
+    </div>
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+
+</body>
+
+</html>
